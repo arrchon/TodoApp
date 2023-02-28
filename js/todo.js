@@ -111,4 +111,14 @@ if ( savedTodos !== null ){
     // 내가한방법 : loadTodos.forEach(item => { const loadLists = document.createElement("li"); loadLists.innerText = item; savedList.appendChild(loadLists); })
 }
 
+// placeholder 추가 제거
+function focusInput (){
+  toDoInput.placeholder = '';
+}
 
+function focusOutput (){
+  toDoInput.placeholder = `What's your today's work?`;
+}
+
+toDoInput.addEventListener("focusin", focusInput);
+toDoInput.addEventListener("focusout", focusOutput);
